@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/main.js"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="logo">
+            <img src="../images/reshot-icon-logout-39XGS2UZLY.svg" alt="" />
+          </a>
+          <div class="nav-items">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Blog</a>
+            <a href="#" class="nav-item">About</a>
+            <a href="#" class="nav-item">Register</a>
+            <a href="./pages/log_in.html">
+              <button class="nav-ite">Log in</button>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="image">
+        <div class="container">
+          <h1>
+            Welcome to my <br />
+            website!
+          </h1>
+          <p>This website made for pass the exam from Najot talim</p>
+          <div class="par1">By <span>Abdulaziz</span> | July 19,2024</div>
+          <button class="btn1">Read more</button>
+        </div>
+      </section>
+      <div class="container">
+        <section class="par2">
+          <h1>Choose the Category</h1>
+
+          <form id="productForm">
+            <label for="productName">Name</label>
+            <input
+              type="text"
+              id="productName"
+              placeholder="Product Name"
+              required
+            />
+            <label for="productDescription">Description</label>
+            <input
+              type="text"
+              id="productDescription"
+              placeholder="Product Description"
+              required
+            />
+            <label for="productPrice">Price</label>
+            <input
+              type="number"
+              id="productPrice"
+              placeholder="Product Price"
+              required
+            />
+            <div class="par4">
+              <button type="button" id="addProductButton">Add Product</button>
+            </div>
+          </form>
+          <div id="productList"></div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="all">
+        <div class="par3">
+          <div>EXAM 6</div>
+          <div>ozodbekovabdu@gmail.com</div>
+        </div>
+        <div class="log">
+          <img src="../images/reshot-icon-logout-39XGS2UZLY.svg" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

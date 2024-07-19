@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.logo img {
+  max-width: 64px;
+}
+
+header {
+  background-color: #232536;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav {
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+nav .par2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+nav .par1 {
+  max-width: 147px;
+  width: 100%;
+  color: #000;
+  background-color: #ffd050;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+nav .par1:hover {
+  background-color: rgba(255, 208, 80, 0.9450980392);
+  color: #000;
+}
+
+main {
+  padding-top: 120px;
+}
+main h1 {
+  text-align: center;
+}
+
+form {
+  display: block;
+}
+
+.form-control {
+  margin-bottom: 3rem;
+}
+
+.form__login {
+  padding-top: 48px;
+  padding-left: 350px;
+}
+.form__login .conte {
+  display: flex;
+  align-items: center;
+  gap: 450px;
+}
+.form__login .conte p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #db4444;
+}
+.form__login .conte button {
+  max-width: 143px;
+  width: 100%;
+  padding: 16px 48px 16px 48px;
+  background-color: #db4444;
+  color: #fff;
+  border: none;
+  transition: 0.4s;
+}
+.form__login .conte button:hover {
+  background-color: #fff;
+  color: #db4444;
+  border: 1px solid #db4444;
+}
+
+label {
+  margin-bottom: 0.8rem;
+}
+
+.form-control input {
+  outline: none;
+  padding: 24px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.form-control input::-moz-placeholder {
+  color: #454444;
+}
+
+.form-control input::placeholder {
+  color: #454444;
+}
+
+footer {
+  margin-top: 110px;
+  background-color: #232536;
+}
+footer .all {
+  padding: 32px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .all .par3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+footer .all .log img {
+  max-width: 64px;
+  width: 100%;
+}/*# sourceMappingURL=log_in.css.map */
