@@ -7,24 +7,26 @@ import { checkToken, redirect } from "./utils.js";
   }
 })();
 
-const productsArray = [];
-
-async function fetchProducts() {
-  try {
-    const response = await fetch("https://api.escuelajs.co/api/v1/products");
-    const data = await response.json();
-    data.forEach((product) => {
-      productsArray.push({
-        name: product.title,
-        description: product.description,
-        price: product.price,
-      });
-    });
-    displayProducts();
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  }
+function getProductsFromLocalStorage() {
+  const products = localStorage.getItem("products");
+  return products ? JSON.parse(products) : [];
 }
+
+function saveProductsToLocalStorage(productsArray) {
+  localStorage.setItem("products", JSON.stringify(productsArray));
+}
+
+function displayProducts(productsArray) {
+  document.getElementById("productList").innerHTML = productsArray
+    .map(
+      (product) =>
+        `<p> <strong>Product Name:</strong> ${product.name}, <br/> <strong>Description:</strong>  ${product.description}, <br/> <strong>Price:</strong>  $${product.price}</p>`
+    )
+    .join("");
+}
+
+const productsArray = getProductsFromLocalStorage();
+displayProducts(productsArray);
 
 document
   .getElementById("addProductButton")
@@ -37,18 +39,9 @@ document
 
     productsArray.push(product);
 
-    displayProducts();
+    saveProductsToLocalStorage(productsArray);
+
+    displayProducts(productsArray);
 
     document.getElementById("productForm").reset();
   });
-
-function displayProducts() {
-  document.getElementById("productList").innerHTML = productsArray
-    .map(
-      (product) =>
-        `<p> <strong> Product Name:</strong> ${product.name}, <br/> <strong> Description:</strong> ${product.description},<br/> <strong> Price:</strong>Price: $${product.price}</p>`
-    )
-    .join("");
-}
-
-fetchProducts();
